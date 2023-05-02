@@ -70,7 +70,7 @@
   }
   
   .hero {
-    background-image: url('/img/wallpaperflare.com_wallpaper\ \(1\).jpg');  
+    background-image: url('wallpaperflare.com_wallpaper\ \(1\).jpg');  
     /* img hotel banner tak chan disel */
     background-size: cover;
     background-position: center;
