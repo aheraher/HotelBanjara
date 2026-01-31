@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HOTEL BANJARA PALACE</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
-  <script src="script.js"></script>
-  <style>
-    
 
+  <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
- 
-
     }
-
 
     body {
-      /* font-family: Arial, sans-serif; */
       font-family: 'Ubuntu', sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
       color: #333;
-  overflow-x: hidden;
+      overflow-x: hidden;
     }
 
+    /* ================= HEADER ================= */
     header {
       background-color: #fff;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -38,101 +31,87 @@
       top: 0;
       left: 0;
       right: 0;
-      z-index: 1;
+      z-index: 10;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: auto;
+      padding: 10px 20px;
     }
 
-    nav .logo {
+    .logo {
       display: flex;
       align-items: center;
     }
 
-    nav .logo img {
+    .logo img {
       width: 50px;
       height: 50px;
       margin-right: 10px;
     }
 
-    nav h1 {
-      font-size: 24px;
-    }
-
     nav ul {
       display: flex;
+      list-style: none;
     }
 
     nav li {
-      margin-left: 50px;
+      margin-left: 40px;
+      font-size: 18px;
     }
 
     nav a {
-      color: #333;
       text-decoration: none;
-      transition: all 0.3s ease;
+      color: #333;
     }
 
     nav a:hover {
-      color: #df8d8d70;
-
+      color: #df8d8d;
     }
 
+    /* ================= HERO ================= */
     main {
-      margin-top: 70px;
-      position: relative;
+      margin-top: 80px;
     }
-    
 
     .hero {
+      height: 100vh;
       background-image: url('wallpaperflare.com_wallpaper.jpg');
-   
-      /* img hotel banner tak chan disel */
       background-size: cover;
       background-position: center;
-      /* height: 600px; */
-      width: 100vw;
-      height: 100vh;
+      background-blend-mode: lighten;
+      background-color: rgba(255,255,255,0.8);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: #0e0800;
-      background-color: rgba(255, 255, 255, 0.8);
-    background-blend-mode: lighten;
-    
-
-    }
-    
-    .hero h2 {
-      font-size: 4rem;
-      margin-bottom: 30px;
       text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 24px;
-      line-height: 1.5;
-      margin-bottom: 40px;
-      text-align: center;
+      font-size: 22px;
       max-width: 600px;
+      margin-bottom: 30px;
     }
 
     .cta-button {
-      display: inline-block;
       background-color: #fff;
       color: #333;
-      padding: 10px 20px;
+      padding: 12px 22px;
       border-radius: 5px;
       text-decoration: none;
-      font-size: 20px;
-      transition: all 0.3s ease;
+      font-size: 18px;
+      margin-bottom: 20px;
     }
 
     .cta-button:hover {
@@ -140,259 +119,196 @@
       color: #fff;
     }
 
+    /* ================= CONTACT BUTTONS ================= */
+    .contact-buttons {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .call-btn,
+    .whatsapp-btn {
+      padding: 14px 22px;
+      font-size: 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .call-btn {
+      background-color: #007bff;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+
+    .call-btn:hover,
+    .whatsapp-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    /* ================= ABOUT ================= */
     .about {
-      padding: 100px 0;
+      padding: 100px 20px;
       background-color: #f1f1f1;
+      text-align: center;
     }
 
     .about h2 {
       font-size: 36px;
       margin-bottom: 20px;
-      text-align: center;
     }
 
     .about p {
       font-size: 18px;
-      line-height: 1.5;
-      margin-bottom: 40px;
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    /* ================= SERVICES ================= */
+    .services {
+      padding: 100px 20px;
       text-align: center;
     }
 
-    .new-anime {
-      padding: 100px 0;
-      background-color: #fff;
-      cursor: pointer;
-    }
-
-    .new-anime h2 {
+    .services h2 {
       font-size: 36px;
-      margin-bottom: 20px;
-      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .anime-list {
+    .service-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 40px;
+      gap: 30px;
     }
 
-    .anime-item {
-      margin: 20px;
+    .service-item {
       width: 300px;
-    }
-
-    ;
-
-    /* New Anime Section */
-
-    .new-anime .anime-item {
-      position: relative;
+      background: #f1f1f1;
+      border-radius: 6px;
       overflow: hidden;
-      height: 400px;
-      background-color: #f1f1f1;
-      border-radius: 5px;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
-    .new-anime .anime-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    .service-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
 
-    .new-anime .anime-item img {
+    .service-item img {
       width: 100%;
-      height: 100%;
+      height: 200px;
       object-fit: cover;
     }
 
-    .new-anime .anime-item .anime-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px;
-      font-size: 18px;
-      color: #fff;
+    .service-item h3 {
+      margin: 15px 0 5px;
     }
 
-    .new-anime .anime-item .anime-title a {
-      color: #fff;
-      text-decoration: none;
+    .service-item p {
+      padding: 0 15px 20px;
     }
 
-    /* Contact Section */
+    /* ================= FOOTER ================= */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
 
-
-    /* Responsive Styles */
-
+    /* ================= RESPONSIVE ================= */
     @media (max-width: 768px) {
       nav ul {
         display: none;
       }
 
-      nav .menu-toggle {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-      }
-
-      .showing {
-        display: block;
-      }
-
-      nav li {
-        margin: 10px 0;
+      .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
       }
     }
-
-    /* .contact {
-   
-      /* border: 2px solid greenyellow; */
-   
-    
-    .contact {
-      padding: 100px 0;
-      background-color:#F1F1F1;
-      color:black;
-      /* margin: 0px 0px;
-      padding: 0px 0px;
-
-      width: 100%;
-      left: 0px; */
-      height: 400px; 
-      display: flex ;
-      justify-content: center;
-      flex-direction: column;
-
-    
-    }
-
-/* 
-    .vl {
-      border-left: 6px solid green;
-      height:339px;
-      position: absolute;
-      left: 50%;
-      margin-left: -3px;
-      top: 1765px;
-      
-    } */
-
-    .leftm{
-      margin: 0px 88px;
-      width: 30%;
-      display: block;
-      /* padding: 0px 0px; */
-      padding: 2px 32px;
-      /* border: 2px solid blue; */
-    }
-    #location {
-      /* border: 2px solid red; */
-      /* margin: 0px 0px ; */
-      margin: -225px 948px;
-      padding: 0px 0px ;
-      width: 40%;
-      position: absolute;
-
-    }
-    .contact h2 {
-      text-align: center;
-    }
-    .leftm h2:hover {
-      color: #fff;
-    }
-    .contact p {
-      text-align: center;
-    }
-    footer p {
-      text-align: center;
-    }
-
   </style>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="hotel-g628608918_1920.png" alt="Hotel Logo">
-        <h1>Hotel Banjara Palace</h1>
-        
 
+<header>
+  <nav>
+    <div class="logo">
+      <img src="hotel-g628608918_1920.png" alt="Hotel Logo">
+      <h1>Hotel Banjara Palace</h1>
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+    </ul>
+  </nav>
+</header>
 
-        
+<main>
 
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <h2>Welcome To Hotel Banjara Palace</h2>
+    <p>We are always available for guests. Guest satisfaction is our first priority.</p>
 
+    <a href="#services" class="cta-button">View Services</a>
 
+    <!-- CALL & WHATSAPP BUTTONS -->
+    <div class="contact-buttons">
+      <a href="tel:+919270417889" class="call-btn">📞 Call Now</a>
+      <a href="https://wa.me/917709317889" target="_blank" class="whatsapp-btn">💬 WhatsApp</a>
+    </div>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Hotel Banjara Palace</h2>
+    <p>
+      Hotel Banjara Palace has been serving guests for over 10 years.
+      We provide comfortable rooms, delicious food, and helpful local guidance.
+    </p>
+  </section>
 
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
 
-
-
-
-
-
-
+    <div class="service-list">
+      <div class="service-item">
+        <img src="bedroom-g2d9b08ebf_1920.jpg" alt="Room">
+        <h3>Comfortable Rooms</h3>
+        <p>Clean and affordable rooms for families and pilgrims.</p>
       </div>
-      <ul class="nav-links">
-        <li style="list-style-type: none; font-size: larger "><a href="#home">Home</a></li>
-        <li style="list-style-type: none;  font-size: larger "><a href="#about">About</a></li>
-        <li style="list-style-type: none; font-size: larger "><a href="#service">Services</a></li>
-        <li style="list-style-type: none; font-size: larger "><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="home" class="hero">
-      <h2>Welcome To Hotel Banjara </h2>
-      <p> We are alwas avalaible for Geust. Gesuit is firsth pririty </p>
-      <button id="scrollButton"> <a href="#service" class="cta-button" >View Services </a></button>
-    </section>
-    <section id="about" class="about">
-      <h2>About Hotel Banjara Palace </h2>
-      <p>Hotel Banjara Palace is present in since last 10 year in Hotel industry. many more etc </p>
-      <a href="#contact" class="cta-button">Contact Us</a>
-    </section>
-    <div id="targetLocation"></div>
-    <section id="new-anime" class="new-anime">
-      <h2>Services</h2>
-      
-      <div class="anime-list">
-        <div class="anime-item">
-          <img src="bedroom-g2d9b08ebf_1920.jpg" alt="hotel photo">
-          <h3>Service</h3>
-          <p> good room in afftable rent </p>
-          <a href="#service" class="cta-button">Read More</a>
-        </div>
-        <div class="anime-item">
-          <img src="hotel-g628608918_1920.png" alt="hole photo 2">
-          <h3>Service</h3>
-          <p> good food as per need </p>
-          <a href="#service" class="cta-button">Read More</a>
-        </div>
-        <div class="anime-item">
-          <img src="receptionists-gbd25add29_1920.jpg" alt="htl photo 3">
-          <h3>Service</h3>
-          <p> Trimbakeshar guide any morre faslity </p>
-          <a href="#service" class="cta-button">Read More</a>
-        </div>
-      </div>
-    </section>
-    <br>
-    <hr>
-    <br>
 
-      <!-- what app ver go chy logo -->
-    </section>
-  </main>
-  <footer>
-    <p>&copy; <big>HOTEL BANJARA PALACE </big></p>
-  </footer>
+      <div class="service-item">
+        <img src="hotel-g628608918_1920.png" alt="Food">
+        <h3>Quality Food</h3>
+        <p>Fresh and hygienic food as per guest needs.</p>
+      </div>
+
+      <div class="service-item">
+        <img src="receptionists-gbd25add29_1920.jpg" alt="Guide">
+        <h3>Travel Guidance</h3>
+        <p>Trimbakeshwar temple guidance and travel assistance.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© HOTEL BANJARA PALACE</p>
+</footer>
+
 </body>
-<script>document.getElementById("scrollButton").addEventListener("click", function() {
-  const targetElement = document.getElementById("targetLocation");
-  targetElement.scrollIntoView({ behavior: "smooth" });
-});</script>
 </html>
